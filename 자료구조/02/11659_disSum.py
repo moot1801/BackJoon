@@ -19,6 +19,13 @@ input = sys.stdin.readline
 
 N, M = map(int, input().split())
 N_num = list(map(int, input().split()))
+arr = [0]*N
+sum=0
+for idx, i in enumerate(N_num):
+    sum+=i
+    arr[idx]=sum
+print(arr)
 for i in range(M):
-    i, j = map(int, input().split())
-    print(sum(N_num[i-1:j]))
+    j, i = map(int, input().split())
+    k = arr[j-2] if j-1>0 else 0
+    print(arr[i-1]- k)
