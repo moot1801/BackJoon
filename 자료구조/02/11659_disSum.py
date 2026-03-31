@@ -24,7 +24,6 @@ sum=0
 for idx, i in enumerate(N_num):
     sum+=i
     arr[idx]=sum
-print(arr)
 for i in range(M):
     j, i = map(int, input().split())
     k = arr[j-2] if j-1>0 else 0
